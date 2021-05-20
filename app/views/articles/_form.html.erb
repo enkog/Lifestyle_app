@@ -1,37 +1,45 @@
-<%= form_with(model: article, local: true) do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+<div class="container-fluid">
+  <div class="row h-100">
+    <%= form_for(@article, :html => {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white text-dark rounded'}) do |f| %>
+      <% if article.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
-      <ul>
-        <% article.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% article.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+        <div class="p-3">
+          <strong><%= f.label :title, "Title" %></strong><br />
+          <div class="form-group mb-2">
 
-  <div class="field">
-    <%= form.label :author_id %>
-    <%= form.number_field :author_id %>
+            <%= f.text_field :title, class: 'form-control' %><br>
+          </div>
+        </div>
+        <div class="p-3">
+          <strong><%= f.label :image, "Image link" %></strong><br />
+          <div class="form-group mb-2">
+
+            <%= f.url_field :image, class: 'form-control' %><br>
+          </div>
+
+          <strong><%= f.label :text, "Content" %></strong><br />
+          <div class="form-group mb-2">
+
+            <%= f.text_area :text, class: 'form-control' %><br>
+          </div>
+
+          <strong>Categories</strong><br />
+          <div class="form-group mb-2">
+            <%= f.collection_select(:category_ids, Category.all, :id, :name, {}, {:multiple => true, :class => 'form-control js-example-basic-multiple'}) %><br>
+          </div>
+
+        </div>
+        <%= f.submit 'Create', {:class => 'w-100 text-center text-uppercase p-3 text-dark'} %>
+    <% end %>
+
   </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.url_field :image %><br>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

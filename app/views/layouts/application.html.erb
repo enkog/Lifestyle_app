@@ -12,9 +12,7 @@
   </head>
 
   <body>
-    <%=link_to 'login', login_path%>
-    <%=link_to 'signup', signup_path%>
-    <%=link_to 'logout', logout_path%>
+    <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
 </html>
