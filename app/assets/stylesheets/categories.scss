@@ -45,3 +45,26 @@
     }
   }
 }
+
+.category-title-list h3 {
+  display: inline-block;
+  border-bottom: 3px solid #fd6000;
+  width: auto;
+}
+
+.cat-article-section {
+  display: flex;
+  width: 100%;
+  height: 250px;
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .cat-article-desc {
+    height: 250px;
+  }
+}
