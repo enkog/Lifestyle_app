@@ -1,29 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
+<main>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Priority</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="categories row w-100 m-0">
+         <% @categories.each do |category| %>
+           <div class="category-container col-6 col-lg-3 p-0">
+               <div class="category-image">
+                 <%= category_main_image(category) %>
+               </div>
+               <div class="category-name">
+                   <%= link_to category.name, category_path(category)%>
+               </div>
+               <div class="category-article-title">
+                   <p><%= category.articles.first.title%></p>
+               </div>
+           </div>
+         <%end%>
+  </div>
 
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= category.priority %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Category', new_category_path %>
+</main>

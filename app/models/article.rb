@@ -5,6 +5,8 @@ class Article < ApplicationRecord
   has_many :organizations, foreign_key: :article_id, inverse_of: :article
   has_many :categories, through: :organizations
 
+  has_one_attached :image
+
 
   validates_presence_of :title
   validates_length_of :title, minimum: 3
