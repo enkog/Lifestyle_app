@@ -11,4 +11,5 @@ class Article < ApplicationRecord
   validates_presence_of :text
   validates_length_of :text, minimum: 10
   validates_presence_of :image
+  validates_presence_of :author_id
 end
