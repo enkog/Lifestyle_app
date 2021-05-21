@@ -12,8 +12,53 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <nav class="navbar navbar-expand-lg navbar-light">
+       <div class="container-fluid">
+         <%= link_to 'artiCULATE', root_path, class: "navbar-brand main_color" %>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav mx-auto">
+             <li class="nav-item">
+               <%= link_to 'HOME', root_path, class: "nav-link" %>
+             </li>
+             <li class="nav-item">
+               <%= link_to 'STYLE', '#', class: "nav-link" %>
+             </li>
+             <li class="nav-item">
+               <%= link_to 'DESIGN', '#', class: "nav-link" %>
+             </li>
+             <li class="nav-item">
+               <%= link_to 'MOTHERHOOD', '#', class: "nav-link" %>
+             </li>
+             <li class="nav-item">
+               <%= link_to 'FOOD', '#', class: "nav-link" %>
+             </li>
+             <li class="nav-item">
+               <%= link_to 'TRAVEL', '#', class: "nav-link" %>
+             </li>
+
+           </ul>
+             <ul class="navbar-nav ms-auto">
+               <li class="nav-item">
+                 <%= link_to 'CREATE AN ARTICLE', new_article_path, class: "nav-link" %>
+               </li>
+                <% if current_user %>
+                  <li class="nav-item"><%= link_to current_user.name.upcase, current_user, class: "nav-link" %>
+                  <li class="nav-item"><%= link_to '| LOGOUT', logout_path, method: :delete, class: "no_pl nav-link ml-0" %></li>
+                <% else %>`
+                  <li class="nav-item"><%= link_to "LOGIN |", login_path, class: "nav-link no_pr" %></li>
+                  <li class="nav-item"><%= link_to 'REGISTER', signup_path, class: "nav-link" %></li>
+                <% end %>
+             </ul>
+         </div>
+       </div>
+     </nav>
+<div class="container-fluid">
+  <%= yield %>
+</div>
+
+
   </body>
 </html>

@@ -4,6 +4,8 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     @categories = Category.all.order(created_at: :desc).limit(4)
+    @article = Article.all
+    @most_voted_article = Article.includes(:votes).sort { |a, b| b.votes.size <=> a.votes.size }.first
   end
 
   # GET /categories/1 or /categories/1.json

@@ -48,23 +48,58 @@
 
 .category-title-list h3 {
   display: inline-block;
+  color: #fd6000;
   border-bottom: 3px solid #fd6000;
   width: auto;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .cat-article-section {
   display: flex;
   width: 100%;
-  height: 250px;
+  height: 300px;
 
   img {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     object-position: top;
   }
 
   .cat-article-desc {
-    height: 250px;
+    height: 300px;
+  }
+}
+
+.most_voted_article {
+  height: 92vh;
+  position: relative;
+
+  a {
+    img {
+      width: 100% !important;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .most_voted_description {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #f76108;
+    }
+
+    .text {
+      color: white;
+      font-size: 18px;
+    }
   }
 }

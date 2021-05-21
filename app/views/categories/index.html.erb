@@ -1,7 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <main>
+  <div class="most_voted_article w-100 mx-0 ">
+         <%= link_to(image_tag(@most_voted_article&.image ), article_path(@most_voted_article), class: "w-100")if @most_voted_article&.image&.attached? %>
+         <div class="most_voted_description">
+             <div class="title">
+                 <%= @most_voted_article&.title%>
+             </div>
+             <div class="text">
+                 <%= @most_voted_article&.text&.truncate(100)%>
+             </div>
+         </div>
 
+     </div>
+     
   <div class="categories row w-100 m-0">
          <% @categories.each do |category| %>
            <div class="category-container col-6 col-lg-3 p-0">

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :users
   resources :articles
+  get '/vote/:article_id' => 'votes#add_vote', as: :add_vote
 
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
