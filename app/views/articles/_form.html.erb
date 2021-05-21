@@ -1,7 +1,7 @@
 <div class="container mb-2">
   <div class="row justify-content-md-center ">
   <div class= "col-sm-6 form-container mt-2">
-    <h1 class= "text-center">New Article</h1>
+    <h4 class= "text-center">New Article</h4>
     <%= form_with(model: article, local: true) do |form| %>
 
       <% if article.errors.any? %>
@@ -32,11 +32,11 @@
     <div class="form-group checkboxes mt-2">
       <strong>Categories</strong><br />
        <div class="form-group">
-         <%= form.collection_select(:category_ids, Category.all, :id, :name, {}, {:multiple => true, :class => 'font-12 form-control js-example-basic-multiple'}) %><br>
+         <%= form.collection_select(:category_ids, Category.all, :id, :name, {}, {:multiple => true, :class => 'form-control'}) %><br>
        </div>
        </div>
 
-      <div class="actions mb-2">
+      <div class="actions mt-0 mb-2">
         <%= form.submit "Create", class: "btn btn-dark btn-lg" %>
       </div>
     <% end %>
