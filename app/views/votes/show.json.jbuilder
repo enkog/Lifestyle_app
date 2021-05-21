@@ -1,1 +1,1 @@
-json.partial! "votes/vote", vote: @vote
+json.partial! 'votes/vote', vote: @vote

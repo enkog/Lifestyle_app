@@ -7,7 +7,6 @@ class Article < ApplicationRecord
 
   has_one_attached :image
 
-
   validates_presence_of :title
   validates_length_of :title, minimum: 3
   validates_presence_of :text

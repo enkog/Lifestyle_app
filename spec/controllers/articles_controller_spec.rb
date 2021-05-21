@@ -11,12 +11,7 @@ RSpec.describe ArticlesController, type: :controller do
       get :index
       expect(response).to be_successful
     end
-
-
   end
-
-
-
 end
 
 RSpec.describe 'Article Management', type: :feature do

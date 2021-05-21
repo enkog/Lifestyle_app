@@ -1,1 +1,1 @@
-json.partial! "organizations/organization", organization: @organization
+json.partial! 'organizations/organization', organization: @organization
