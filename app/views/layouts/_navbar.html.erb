@@ -10,26 +10,12 @@
            <%= link_to 'HOME', root_path, class: "nav-link" %>
          </li>
          <li class="nav-item">
-           <%= link_to 'STYLE', '#', class: "nav-link" %>
-         </li>
-         <li class="nav-item">
-           <%= link_to 'DESIGN', '#', class: "nav-link" %>
-         </li>
-         <li class="nav-item">
-           <%= link_to 'MOTHERHOOD', '#', class: "nav-link" %>
-         </li>
-         <li class="nav-item">
-           <%= link_to 'FOOD', '#', class: "nav-link" %>
-         </li>
-         <li class="nav-item">
-           <%= link_to 'TRAVEL', '#', class: "nav-link" %>
+           <%= link_to 'CREATE AN ARTICLE', new_article_path, class: "nav-link" %>
          </li>
 
        </ul>
          <ul class="navbar-nav ms-auto">
-           <li class="nav-item">
-             <%= link_to 'CREATE AN ARTICLE', new_article_path, class: "nav-link" %>
-           </li>
+
             <% if current_user %>
               <li class="nav-item"><%= link_to current_user.name.upcase, current_user, class: "nav-link" %>
               <li class="nav-item"><%= link_to '| LOGOUT', logout_path, method: :delete, class: "no_pl nav-link ml-0" %></li>

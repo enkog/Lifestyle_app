@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
-
-<div class="row featured-section">
+<div class="row">
 
   <% @category.articles.each do |article| %>
     <div class=" col-12 col-md-6 bg-white">
@@ -33,16 +31,3 @@
   <% end %>
 
 </div>
-
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-
-<p>
-  <strong>Priority:</strong>
-  <%= @category.priority %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
