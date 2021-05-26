@@ -59,3 +59,5 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+gem 'rubocop', '>= 1.0', '< 2.0'

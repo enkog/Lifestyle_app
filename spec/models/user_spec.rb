@@ -1,6 +1,5 @@
 require 'rails_helper'
 require 'capybara/rspec'
-
 RSpec.describe User, type: :model do
   subject do
     described_class.new(name: 'Nkiruka')

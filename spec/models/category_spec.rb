@@ -1,8 +1,9 @@
 require 'rails_helper'
+require 'capybara/rspec'
 
 RSpec.describe Category, type: :model do
   context 'associations' do
-    it 'should have many articles through categorization' do
+    it 'should have many articles through organizations' do
       t = Category.reflect_on_association(:articles)
       expect(t.macro).to eq(:has_many)
     end

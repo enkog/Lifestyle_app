@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'capybara/rspec'
 RSpec.describe Organization, type: :model do
   context 'associations' do
     it 'should belongs to an article' do

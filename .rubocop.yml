@@ -7,10 +7,8 @@ AllCops:
 
   DisplayCopNames: true
 
-Layout/EndOfLine:
-  EnforcedStyle: lf
 Layout/LineLength:
-  Max: 120
+  Max: 130
 Metrics/MethodLength:
   Max: 20
 Metrics/AbcSize:
