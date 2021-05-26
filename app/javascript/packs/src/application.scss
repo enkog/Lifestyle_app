@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+
 #page-container {
   position: relative;
   min-height: 100vh;
@@ -9,11 +10,11 @@
 }
 
 .no_pr {
-  padding-right: 0px !important;
+  padding-right: 0 !important;
 }
 
 .no_pl {
-  padding-left: 0px !important;
+  padding-left: 0 !important;
 }
 
 .navbar {
@@ -28,11 +29,11 @@
 }
 
 .nav-link:hover {
-      color: #f76108 !important;
-  }
+  color: #f76108 !important;
+}
 
 #footer {
-  background-color:  #4e443e !important;
+  background-color: #4e443e !important;
   position: absolute;
   bottom: 0;
   width: 100%;

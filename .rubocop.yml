@@ -7,6 +7,8 @@ AllCops:
 
   DisplayCopNames: true
 
+Layout/EndOfLine:
+  EnforcedStyle: lf
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
@@ -17,7 +19,7 @@ Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
-  Max: 30
+  Max: 56
 
 
 Style/Documentation:
@@ -33,6 +35,7 @@ Style/DefWithParentheses:
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
+
 Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
@@ -44,6 +47,8 @@ Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
   Enabled: false
+
+
 Style/HashEachMethods:
   Enabled: false
 Style/HashTransformKeys:

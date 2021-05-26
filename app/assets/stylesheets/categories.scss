@@ -3,12 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .categories {
   .category-container {
+    height: 30vh;
+    position: relative;
 
-    height: 30vh ;
-    position: relative ;
-
-    .category-image {
-      height: 100% ;
+  .category-image {
+    height: 100%;
 
       img {
         object-fit: cover;
@@ -30,6 +29,7 @@
         color: #fff;
         border-bottom: 2px solid #ee9b00;
       }
+
       a:hover {
         color: #8e9aaf;
       }
