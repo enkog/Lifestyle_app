@@ -1,6 +1,23 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.cat-article-section {
+  display: flex;
+  width: 100%;
+  height: 300px;
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .cat-article-desc {
+    height: 300px;
+  }
+}
+
 .most_voted_article {
   height: 92vh;
   position: relative;
@@ -42,23 +59,6 @@
   }
 }
 
-.cat-article-section {
-  display: flex;
-  width: 100%;
-  height: 300px;
-
-  img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: top;
-  }
-
-  .cat-article-desc {
-    height: 300px;
-  }
-}
-
 .categories {
   .category-container {
     height: 30vh;
@@ -67,11 +67,11 @@
     .category-image {
       height: 100%;
 
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-        }
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .category-name {
@@ -103,6 +103,3 @@
     }
   }
 }
-
-
-
