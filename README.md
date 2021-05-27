@@ -2,8 +2,7 @@
 
 > This project is based on a lifestyle articles website and is for Ruby on Rails capstone at Microverse. I have followed the given design, and I chose to develop this app for articles on women's lifestyles with 'Ruby on Rails". A new article can be created under one or multiple categories. You can upvote an article. The most voted article will be displayed on the home page's top section.
 
-![Homepage](./app/assets/images/)
-![category_articles page](./app/assets/images/)
+![Homepage](./app/assets/images/screenshot.png)
 
 ## Built With
 
@@ -18,11 +17,11 @@
 
 ## Live Demo
 
-[artiCULATE](https://gentle-reaches-95015.herokuapp.com/)
+[artiCULATE](https://articulate-app.herokuapp.com/)
 
 ## Video Link
 
-[Loom Presentation]()
+[Loom Presentation](https://www.loom.com/share/4361dde744df4378bc9188783e4d7c00)
 
 ## Getting Started
 
