@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  belongs_to :author, class_name: 'User'
+  belongs_to :author, class_name: 'User', foreign_key: :author_id
   has_many :votes, foreign_key: :article_id
   has_many :voters, through: :votes, source: :user
   has_many :organizations, foreign_key: :article_id, inverse_of: :article
