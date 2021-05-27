@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :votes
   resources :categories
   resources :users
-  resources :articles
+  resources :articles do
+    resources :comments, only: [:create]
+  end
   get '/vote/:article_id' => 'votes#add_vote', as: :add_vote
 
   get 'signup' => 'users#new'

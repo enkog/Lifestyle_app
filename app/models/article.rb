@@ -4,6 +4,7 @@ class Article < ApplicationRecord
   has_many :voters, through: :votes, source: :user
   has_many :organizations, foreign_key: :article_id, inverse_of: :article
   has_many :categories, through: :organizations
+  has_many :comments
 
   has_one_attached :image
 

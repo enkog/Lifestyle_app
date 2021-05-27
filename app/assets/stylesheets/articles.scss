@@ -4,3 +4,33 @@
 .btn-main {
   background-color: #f76108;
 }
+
+.article-comments-section {
+  margin: 5px;
+  width: 50%;
+  margin-left: 2%;
+
+  .article-comments {
+    margin-bottom: 2px;
+    padding: 0px;
+
+    p {
+      font-size: 0.8em;
+      width: 90%;
+    }
+
+    span {
+      margin-left: 30px;
+      font-size: 0.6em;
+    }
+  }
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea; 
+  padding-top: 5px; 
+}
+  
+.description {
+  margin-top: 0;
+}
