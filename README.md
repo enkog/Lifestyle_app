@@ -21,7 +21,7 @@
 
 ## Video Link
 
-[Loom Presentation](https://www.loom.com/share/4361dde744df4378bc9188783e4d7c00)
+[Loom Presentation](https://www.loom.com/share/aa1932ca07f04be1bb957e5de936cba1)
 
 ## Getting Started
 
@@ -90,6 +90,8 @@ Give a ⭐️ if you like this project!
 > Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 > Stock images from unsplash.com
+
+> Article content ideas from https://camillestyles.com/
 
 
 
