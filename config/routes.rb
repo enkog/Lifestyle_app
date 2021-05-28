@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   root to: 'categories#index'
   resources :organizations
   resources :votes
-  resources :categories
-  resources :users
+  resources :categories, only: %i[new create show index]
+  resources :users, only: %i[new create]
   resources :articles do
     resources :comments, only: [:create]
   end

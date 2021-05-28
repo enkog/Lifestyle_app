@@ -12,12 +12,15 @@
          <li class="nav-item">
            <%= link_to 'CREATE AN ARTICLE', new_article_path, class: "nav-link" %>
          </li>
+         <li class="nav-item">
+           <%= link_to 'CREATE CATEGORY', new_category_path, class: "nav-link" %>
+         </li>
 
        </ul>
          <ul class="navbar-nav ms-auto">
 
             <% if current_user %>
-              <li class="nav-item"><%= link_to current_user.name.upcase, current_user, class: "nav-link" %>
+              <li class="nav-item"><%= link_to current_user.name.upcase, '#', class: "nav-link" %>
               <li class="nav-item"><%= link_to '| LOGOUT', logout_path, method: :delete, class: "no_pl nav-link ml-0" %></li>
             <% else %>`
               <li class="nav-item"><%= link_to "LOGIN |", login_path, class: "nav-link no_pr" %></li>

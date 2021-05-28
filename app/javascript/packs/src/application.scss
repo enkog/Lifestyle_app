@@ -58,7 +58,7 @@ footer a {
 }
 
 .static-background {
-  height: 85vh;
+  height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,6 +76,7 @@ footer a {
 
 .form-container {
   background-color: rgba(256, 256, 256, 0.5);
-  border: 1px solid #777;
+  border: 1px solid rgb(151, 145, 145);
   border-radius: 6px;
+  padding: 15px;
 }

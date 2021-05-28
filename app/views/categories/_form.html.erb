@@ -1,3 +1,7 @@
+<div class="container">
+  <div class="row justify-content-md-center ">
+  <div class= "col-sm-6 form-container">
+    <h4 class= "text-center">New Category</h4>
 <%= form_with(model: category, local: true) do |form| %>
   <% if category.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +15,21 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group mt-2">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group mt-2">
     <%= form.label :priority %>
-    <%= form.number_field :priority %>
+    <%= form.number_field :priority, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions mt-0 mb-2">
+    <%= form.submit "Create", class: "btn btn-outline-light btn-lg main_color" %>
   </div>
+  
 <% end %>
+</div>
+</div>
+</div>
