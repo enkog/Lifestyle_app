@@ -6,8 +6,6 @@
 
   <h4 class="center description"><strong>Description:</strong></h4>
 
-
-
   <%= simple_format(@article.text) %>
   <hr>
   <p>
@@ -35,21 +33,22 @@
     <% end %>
     <%= form_for(@article.comments.new, url: article_comments_path(@article)) do |form| %>
       <%= form.text_area :content, id: :comment_content, class: 'form-control w-75', placeholder: 'Add Comment' %>
-      <%= form.submit 'Comment', class: 'btn btn-dark mt-4' %>
+      <%= form.submit 'Comment', class: 'btn btn-dark my-4' %>
     <% end %>
   </div>
-  <div class="article-actions mb-5">
+  <% if @article.author == current_user %>
+    <div class="article-actions mb-5">
 
-    <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+      <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
 
-    <%= link_to "Delete this article", article_path(@article), method: :delete,
+      <%= link_to "Delete this article", article_path(@article), method: :delete,
 
-    data: { confirm: "Are you sure you want to delete the article?"},
+      data: { confirm: "Are you sure you want to delete the article?"},
 
-    class: "btn btn-xs btn-danger" %>
+      class: "btn btn-xs btn-danger" %>
 
-  </div>
-
+    </div>
+  <% end %>
 </div>
 
 
