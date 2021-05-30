@@ -5,7 +5,7 @@
     <div class=" col-12 col-md-6 bg-white">
       <div class="cat-article-section row h-100 w-100">
         <div class="col-6">
-          <%=image_tag(article.image) if article.image.attached?%>
+          <%=image_tag(article.image)%>
         </div>
         <div class="col-6 cat-article-desc">
           <div class="category-title-list text-dark font-weight-bold pt-2">
@@ -18,7 +18,7 @@
             <p class="mt-3"><%=article.text.truncate(20) %></p>
             <%=  link_to "Read More...", article %><br>
             <small class="text-muted">
-              Created by: <%= article.author.name if article.author%><br>last updated: <%= time_ago_in_words(article.updated_at) %> ago
+              Created by: <%= article.author.name%><br>last updated: <%= time_ago_in_words(article.updated_at) %> ago
             </small>
             <%= show_votes?(article) %>
             <%= handle_vote(article) %>
