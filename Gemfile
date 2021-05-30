@@ -58,4 +58,5 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'aws-sdk-rails'
 gem 'rubocop', '>= 1.0', '< 2.0'
