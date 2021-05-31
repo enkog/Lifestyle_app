@@ -6,12 +6,12 @@ class Article < ApplicationRecord
   has_many :categories, through: :organizations
   has_many :comments
 
-  has_one_attached :image
+  has_one_attached :image, dependent: :destroy
 
   validates_presence_of :title
   validates_length_of :title, minimum: 3
   validates_presence_of :text
   validates_length_of :text, minimum: 10
-  validates_presence_of :image
+  validates :image, content_type: [:png, :jpg, :jpeg]
   validates_presence_of :author_id
 end
