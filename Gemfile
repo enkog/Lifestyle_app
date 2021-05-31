@@ -58,6 +58,4 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'aws-sdk-rails', require:false
-gem 'active_storage_validations'
 gem 'rubocop', '>= 1.0', '< 2.0'
