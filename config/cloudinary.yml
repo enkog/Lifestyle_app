@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: enkodes
+  api_key: '288915887779168'
+  api_secret: ncFshFaYkmv_o9a96KasPKrKqO4
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: enkodes
+  api_key: '288915887779168'
+  api_secret: ncFshFaYkmv_o9a96KasPKrKqO4
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: enkodes
+  api_key: '288915887779168'
+  api_secret: ncFshFaYkmv_o9a96KasPKrKqO4
+  enhance_image_tag: true
+  static_file_support: false

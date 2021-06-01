@@ -2,7 +2,7 @@
 
 <main>
   <div class="most_voted_article w-100 mx-0 ">
-         <%= link_to(image_tag(@most_voted_article&.image ), article_path(@most_voted_article), class: "w-100")if @most_voted_article&.image&.attached? %>
+         <%= image_tag @most_voted_article.image, class: "w-100"%>
          <div class="most_voted_description">
              <div class="title">
                  <%= @most_voted_article&.title%>
