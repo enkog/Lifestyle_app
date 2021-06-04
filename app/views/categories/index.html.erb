@@ -2,7 +2,7 @@
 
 <main>
   <div class="most_voted_article w-100 mx-0 ">
-         <%= image_tag @most_voted_article.image, class: "w-100 h-100"%>
+        <%= article_image(@most_voted_article) %>
          <div class="most_voted_description">
              <div class="title">
                  <%= @most_voted_article&.title%>
