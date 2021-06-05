@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :require_user, except: %i[index show]
 
   def index
-    @articles = Article.all
+    @articles = Article.all.includes(image_attachment: :blob)
   end
 
   def show; end
@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   def edit; end
 
   def create
-    @article = current_user.articles.build(article_params)
+    @article = current_user.articles.new(article_params)
 
     if @article.save
       redirect_to root_path

@@ -4,9 +4,7 @@
   <% @category.articles.each do |article| %>
     <div class=" col-12 col-md-6 bg-white">
       <div class="cat-article-section row h-100 w-100">
-        <div class="col-6">
-          <%=article_image(article)%>
-        </div>
+        <div class="col-6"><%=article_image(article)%></div>
         <div class="col-6 cat-article-desc">
           <div class="category-title-list text-dark font-weight-bold pt-2">
             <h3 class="position-relative"><%= @category.name %></h3>

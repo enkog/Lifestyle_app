@@ -3,11 +3,14 @@ class CategoriesController < ApplicationController
   before_action :require_user, except: %i[index]
 
   def index
-    @categories = Category.order('priority ASC').includes(:articles).limit(4)
+    @articles = Article.all
+    @categories = Category.all.order('priority ASC').includes(:articles).limit(4)
     @most_voted_article = Article.includes(:votes).min { |a, b| b.votes.size <=> a.votes.size }
   end
 
-  def show; end
+  def show
+    
+  end
 
   def new
     @category = Category.new

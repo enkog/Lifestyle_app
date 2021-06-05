@@ -5,14 +5,14 @@
         <%= article_image(@most_voted_article) %>
          <div class="most_voted_description">
              <div class="title">
-                 <%= @most_voted_article&.title%>
+                 <%= @most_voted_article&.title %>
              </div>
              <div class="text">
                  <%= @most_voted_article&.text&.truncate(100)%>
              </div>
          </div>
 
-     </div>
+    </div>
   <div class="categories row w-100 m-0">
          <% @categories.each do |category| %>
            <div class="category-container col-6 col-lg-3 p-0">

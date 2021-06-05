@@ -37,11 +37,11 @@ Rails: 6.0.3
 - Clone this repository with `https://github.com/enkog/Lifestyle_app.git` using your terminal or command line.<br>
 - Change to the project directory by entering `cd Lifestyle_app` in the terminal<br>
 - Next run `bundle install` to install the necessary dependencies<br>
-- run rails `active_storage:install`
 - run `rails db:create`
 - Run `rails db:migrate` to setup your local database.<br>
 - Run `rails db:seed` to get seeded data for project.<br>
-- Finally run `rails console` to start the application.<br>
+- Run `sudo service postgresql start` to start the database service.<br>
+- Finally run `rails s` to start the application.<br>
 
 ### Usage
 
