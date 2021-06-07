@@ -18,4 +18,3 @@ Article.create([{id: 1, author: u1, title: 'first article', text: 'first article
                 {id: 2, author: u2, title: 'second article', text: 'second article text'},
                 {id: 3, author: u1, title: 'third article', text: 'third article text'},
                 {id: 4, author: u2, title: 'fourth article', text: 'fourth article text'}])
-

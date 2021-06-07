@@ -23,7 +23,7 @@
                    <%= link_to category.name, category_path(category)%>
                </div>
                <div class="category-article-title">
-                   <p><%= category.articles.last.title%></p>
+                   <p><%=  category.most_recent_article&.title %></p>
                </div>
            </div>
          <%end%>

@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  has_many :organizations, foreign_key: :category_id
+  has_many :organizations
   has_many :articles, -> { order(id: 'asc') }, through: :organizations
 
   validates_presence_of :name
@@ -7,4 +7,9 @@ class Category < ApplicationRecord
   validates_presence_of :priority
   validates :priority, uniqueness: true, numericality: { in: 1..20 }
   validates :name, uniqueness: true
+
+  def most_recent_article
+    articles = self.articles.order(created_at: :desc)
+    articles[0]
+  end
 end
