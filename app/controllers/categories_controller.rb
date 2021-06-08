@@ -7,9 +7,7 @@ class CategoriesController < ApplicationController
     @most_voted_article = Article.includes(:votes).min { |a, b| b.votes.size <=> a.votes.size }
   end
 
-  def show
-    
-  end
+  def show; end
 
   def new
     @category = Category.new
