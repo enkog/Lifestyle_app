@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<h2 align="center">Title: <%= @article.title %></h2>
+<hr>
+<div class="well col-xs-8 col-xs-offset-2">
+
+  <h4 class="center description"><strong>Description:</strong></h4>
+
+  <%= simple_format(@article.text) %>
+  <hr>
+  <p>
+  <strong>Image:</strong>
+  <div style = "width:20%; height:300px">
+    <%= image_tag(@article.image, style: "width:100%; height:300px") if @article.image.attached? %>
+  </div>
+</p>
+  <p>
+    <strong>Author:</strong>
+    <%= @article.author.name %>
+  </p>
+  <div class='article-comments-section'>
+    <h6>Comments:</h6>
+    <% @article.comments.each do |comment| %>
+      <div class="article-comments">
+        <p>
+        
+          <b><%= comment.user.name %>:</b> <%= comment.content %>
+          <span> <%= comment.created_at.strftime("%Y/%m/%d") %> </span>
+        </p>
+        
+      </div>
+      <hr>
+    <% end %>
+    <%= form_for(@article.comments.new, url: article_comments_path(@article)) do |form| %>
+      <%= form.text_area :content, id: :comment_content, class: 'form-control w-75', placeholder: 'Add Comment' %>
+      <%= form.submit 'Comment', class: 'btn btn-dark my-4' %>
+    <% end %>
+  </div>
+  <% if @article.author == current_user %>
+    <div class="article-actions mb-5">
+
+      <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+
+      <%= link_to "Delete this article", article_path(@article), method: :delete,
+
+      data: { confirm: "Are you sure you want to delete the article?"},
+
+      class: "btn btn-xs btn-danger" %>
+
+    </div>
+  <% end %>
+</div>
+
+
+
+

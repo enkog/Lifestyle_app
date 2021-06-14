@@ -1,0 +1,22 @@
+<div class="static-background">
+  <div class="container-fluid">
+    <div class="row h-100">
+      <%= form_tag('login', {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white text-dark rounded'}) do |f| %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+          <div class="p-3 main_color">
+            <strong>Name</strong><br />
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text main_color bg-light">
+                  @
+                </div>
+              </div>
+              <%= text_field_tag :name, "", class: 'form-control' %><br>
+            </div>
+          </div>
+          <%= submit_tag 'Login', {:class => 'w-100 text-center text-uppercase p-3 main_color bg-main'} %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

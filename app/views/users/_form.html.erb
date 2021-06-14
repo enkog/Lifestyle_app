@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row h-100">
+    <%= form_for(@user, :html => {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white text-dark rounded'}) do |f| %>
+      <% @user.errors.full_messages.each do |error| %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this @user from being saved:</h2>
+
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+        <div class="p-3 main_color">
+          <strong><%= f.label :name, "Name" %></strong><br />
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text main_color bg-light">
+                @
+              </div>
+            </div>
+            <%= f.text_field :name, placeholder: "eg. mike", class: 'form-control' %><br>
+          </div>
+        </div>
+        <%= f.submit 'Sign Up', {:class => 'w-100 text-center text-uppercase p-3 main_color bg-main'} %>
+    <% end %>
+
+  </div>
+</div>

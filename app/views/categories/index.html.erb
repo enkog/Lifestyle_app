@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<main>
+  <div class="most_voted_article w-100 mx-0 ">
+        <%= article_image(@most_voted_article) %>
+         <div class="most_voted_description">
+             <div class="title">
+                 <%= @most_voted_article&.title %>
+             </div>
+             <div class="text">
+                 <%= @most_voted_article&.text&.truncate(100)%>
+             </div>
+         </div>
+
+    </div>
+  <div class="categories row w-100 m-0">
+         <% @categories.each do |category| %>
+           <div class="category-container col-6 col-lg-3 p-0">
+               <div class="category-image">
+                 <%= category_main_image(category) %>
+               </div>
+               <div class="category-name">
+                   <%= link_to category.name, category_path(category)%>
+               </div>
+               <div class="category-article-title">
+                   <p><%=  category.most_recent_article&.title %></p>
+               </div>
+           </div>
+         <%end%>
+  </div>
+</main>
